@@ -12,7 +12,6 @@ const commentSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "Profile",
     },
-
   },
   {
     timestamps: true,
@@ -38,6 +37,7 @@ const blogSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "Profile",
     },
+    comments: [commentSchema],
   },
   {
     timestamps: true,
